@@ -249,7 +249,6 @@ class Env(object):
         return target_dict
         # return target_x_set, target_y_set
 
-
 if __name__ == '__main__':
     env = Env()
     env.set_node_location()
@@ -257,6 +256,10 @@ if __name__ == '__main__':
 
     #     绘制初始部署图
     plt.xlabel('node deployment and target trajectory')
-    plt.xlim(-1, env.env_edge + 1)
-    plt.ylim(-1, env.env_edge + 1)
+    # plt.xlim(-1, env.env_edge + 1)
+    # plt.ylim(-1, env.env_edge + 1)
+    plt.axis([-1, env.env_edge + 1, -1, env.env_edge + 1])
+    ax = plt.gca()
+    ax.set_aspect(1)
+
     plt.show()
