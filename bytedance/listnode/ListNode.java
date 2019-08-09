@@ -3,6 +3,7 @@ package bytedance.listnode;
 /**
  * @author Lynch
  * @date 2019/8/8 9:22
+ * 链表
  */
 public class ListNode {
     int val;

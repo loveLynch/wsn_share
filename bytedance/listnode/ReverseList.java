@@ -1,6 +1,5 @@
 package bytedance.listnode;
 
-import java.util.List;
 
 /**
  * @author Lynch
