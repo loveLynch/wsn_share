@@ -32,7 +32,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         int start = input.nextInt();
         int end = input.nextInt();
-        Queue<Integer> original = new LinkedList<>();  //
+        Queue<Integer> original = new LinkedList<>();
         Set<Integer> storeNum = new HashSet<>();
         original.add(start);
         storeNum.add(start);
@@ -49,13 +49,13 @@ public class Main {
     /**
      * BFS+剪枝
      *
-     * @param original
-     * @param storeNum
-     * @param end
+     * @param original 当前层数据
+     * @param storeNum 存储已经访问过的数据，用于剪枝
+     * @param end      目标数据
      * @return
      */
     private static int getCount(Queue<Integer> original, Set<Integer> storeNum, int end) {
-        Queue<Integer> next = new LinkedList<>();
+        Queue<Integer> next = new LinkedList<>(); //用于存储下一层数据
         while (!original.isEmpty()) {
             int start = original.poll();
             int reverseNum = reverseNum(start);
@@ -78,6 +78,12 @@ public class Main {
         return count;
     }
 
+    /**
+     * 翻转数据，正数
+     *
+     * @param start
+     * @return
+     */
     public static int reverseNum(int start) {
         if (start / 10 == 0)
             return start;
